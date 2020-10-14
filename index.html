@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title> 
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Montserrat">
+          href="https://fonts.googleapis.com/css?family=Montserrat|Lato">
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
 </head>
 <body>
@@ -13,22 +13,25 @@
 
     <div class="navbar">
             <div class="logo">
-                <div class="logo-text">
+                <a class="logo-link" href="#">
                     Logo
-                </div>
+                </a>
             </div>
 
             <div class="nav-links">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link nav-link--home" href="#">Home</a>
                 <a class="nav-link" href="#">Band</a>
                 <a class="nav-link" href="#">Tour</a>
                 <a class="nav-link" href="#">Contact</a>
-                <a class="nav-link" href="#">More
-                    <span class="arrow-down"></span>
-
+                <a class="nav-link" href="#">More <span class="arrow-down"></span>
                 </a>
-                
+              
                 <div class="nav-search">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                    </svg>
+
                 </div>
 
             </div>
@@ -37,6 +40,8 @@
     </div>
 
     <header class="header-main">
+
+        <img class="header-background" src="./img/header-background.jpg" alt="Band Performance">
         
 
         <div class="title">
@@ -46,10 +51,14 @@
                 <div class="title-text--description">
                     The atmosphere in New York is lorem ipsum.
                 </div>
-                <div class="title-text--radio-container">
-                    <button class="title button"></button>
-                    <button class="title button"></button>
-                    <button class="title button"></button>
+
+                <div class="title-text--link-container">
+                    <ul>
+                        <li class="title-text--link"></li>
+                        <li class="title-text--link"></li>
+                        <li class="title-text--link"></li>
+                    </ul>
+                    
                 </div>
             </div>
 
@@ -65,35 +74,35 @@
 
             <h2 class="bio--quote">We love music!</h2>
 
-            <div class="bio--band-description">
+            <p class="bio--band-description">
                 We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
+            </p>
 
         </div>
 
-        <div class="band-section--members">
+        <div class="band-members-container">
             <div class="band-member">
-                <div class="band-member--name">
+                <h4 class="band-member--name">
+                    Name    
+                </h4>
 
-                </div>
-
-                <img src="" alt="" class="band-member--image">
+                <img src="./img/bandmember.jpg" alt="Band Member" class="band-member--image">
             </div>
 
             <div class="band-member">
-                <div class="band-member--name">
+                <h4 class="band-member--name">
+                    Name
+                </h4>
 
-                </div>
-
-                <img src="" alt="" class="band-member--image">
+                <img src="./img/bandmember.jpg" alt="Band Member" class="band-member--image">
             </div>
 
             <div class="band-member">
-                <div class="band-member--name">
+                <h4 class="band-member--name">
+                    Name
+                </h4>
 
-                </div>
-
-                <img src="" alt="" class="band-member--image">
+                <img src="./img/bandmember.jpg" alt="Band Member" class="band-member--image">
             </div>
 
         </div>
@@ -101,30 +110,30 @@
     </div>
 
     <div class="tour-section section">
-        <div class="tour-dates">
+        
             <div class="tour-dates--header-container">
                 <h1 class="header-container--header">Tour Dates</h1>
-                <h2 class="header-container--subheading">
+                <div class="header-container--subheading">
                     <div class="subheading--top">Lorem ipsum we'll play you some music.</div>
                     <div class="subheading--bottom">Remember to book your tickets!</div>
-                </h2>>
+                </div>
             </div>
 
-            <div class="tour-dates--upcoming-container">
-                <div class="date-month">September
-                    <span class="date-month--sold-out">Sold Out!</span>
-                </div>
-                <div class="date-month">October
-                    <span class="date-month--sold-out">Sold Out!</span>
-                </div>
-                <div class="date-month">November
-                    <span class="date-month--number">3</span>
-                </div>
+        <div class="tour-dates--upcoming-container">
+            <div class="date-month">September
+                <span class="date-month--sold-out">Sold Out!</span>
             </div>
+            <div class="date-month">October
+                <span class="date-month--sold-out">Sold Out!</span>
+            </div>
+            <div class="date-month">November
+                <span class="date-month--number">3</span>
+            </div>
+        </div>
 
             
 
-        </div>
+       
 
         <div class="tour-tickets">
 

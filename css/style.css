@@ -10,22 +10,31 @@ html {
     font-family: Montserrat, sans-serif;
 }
 
+body {
+    font-size: 1.5rem;
+}
+
 a {
     text-decoration: none;
     color: inherit;
 }
 
+ul {
+    list-style-type: none
+}
+
+
 
 .header-main {
     display: inline-block;
+    position: relative;
     width: 100%;
-    height: 700px;
-    border: 1px solid pink;
-    background-image: url(../img/header-background.jpg);
-    background-size: cover;
-    image-resolution: cover;
     filter: grayscale(100%);
 
+}
+
+.header-background {
+    width: 100%;
 }
 
 .navbar {
@@ -45,7 +54,7 @@ a {
     top: 0;
 }
 
-.logo-text {
+.logo-link {
     display: flex;
     align-items: center;
     letter-spacing: .4rem;
@@ -78,3 +87,200 @@ a {
 .nav-link:hover {
     color: white;
 }
+
+.arrow-down {
+    
+width: 0; 
+height: 0; 
+border-left: 4px solid transparent;
+border-right: 4px solid transparent;
+border-top: 4px solid #d5d5d5;
+margin-left: 1rem;
+}
+
+.nav-search {
+    margin-left: 3rem;
+    margin-right: 2rem;
+}  
+
+.title {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+
+}
+
+.title-text {
+    font-family: Lato;
+    color: #fff;
+}
+
+.title-text--location {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    margin-bottom: 4rem;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.title-text--description {
+    font-size: 1.5rem;
+}
+
+.title-text--link-container > ul {
+    margin-top: 2rem;
+    display: inline-flex;
+    flex-flow: row;
+}
+
+.title-text--link {
+    border: 1px solid white;
+    border-radius: 100%;
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+.title-text--link:hover {
+    background-color: white;
+}
+
+.band-section {
+    font-family: Lato;
+    text-align: center;
+    padding: 8rem 12rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #777;
+    width: 86%;
+
+}
+
+.bio--band-name {
+
+    font-size: 2rem;
+    color: #111;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+.bio--quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 3rem;
+
+}
+
+.bio--band-description {
+    margin-top: 2rem;
+    line-height: 2.7rem;
+}
+
+.band-members-container {
+    display: flex;
+    flex-flow: row;
+    margin-top: 4rem;
+    justify-content: space-around;
+    width: 100%;
+    border: 2px solid green;
+}
+
+.band-member {
+    flex-basis: 30%;
+    padding: 2rem;
+}
+
+.band-member--image {
+    border-radius: 100%;
+    margin-top: 5rem;
+    opacity: 0.7;
+    border: 10px solid transparent;
+    width: 100%;
+    height: auto;
+
+}
+
+.band-member--image:hover {
+    border: 10px solid rgb(241, 241, 241);
+}
+
+.tour-section {
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: Lato, sans-serif;
+    background-color: #2d2d30;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 5px solid green;
+}
+
+.tour-dates {
+    border: 2px solid red;
+}
+
+.tour-dates--header-container {
+
+    margin-top: 8rem;
+    text-align: center;
+
+}
+
+.header-container--header {
+    font-size: 2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+
+.header-container--subheading {
+    margin-top: 3rem;
+    font-style: italic;
+    color: #bdbdbd;
+    line-height: 3rem;
+}
+
+.tour-dates--upcoming-container {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #fff;
+    color: #bdbdbd;
+    width: 75%;
+    margin-top: 3rem;
+}
+.date-month {
+    padding: 2rem;
+    border-top: 1px solid #bdbdbd;
+    position: relative;
+}
+
+.date-month--sold-out {
+    color: white;
+    background-color: #d9534f;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 0.4rem;
+    
+}
+
+.date-month--number {
+    position: absolute;
+    top: 1rem;
+    right: 2%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #777;
+    padding: 0.2rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    border-radius: 20px;
+}
+
+
