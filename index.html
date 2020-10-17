@@ -21,19 +21,24 @@
 
             <div class="nav-links">
                 <a class="nav-link nav-link--home" href="#">Home</a>
-                <a class="nav-link" href="#">Band</a>
-                <a class="nav-link" href="#">Tour</a>
-                <a class="nav-link" href="#">Contact</a>
-                <a class="nav-link" href="#">More <span class="arrow-down"></span>
-                </a>
-              
-                <div class="nav-search">
-                    <span width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
-                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
-                    </span>
-
+                <a class="nav-link" href="#band">Band</a>
+                <a class="nav-link" href="#tour">Tour</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <div class="nav-link dropdown" onclick=toggleNav()>More <span class="arrow-down"></span>
+                    <ul class="dropdown-content">
+                        <li class="dropdown-li">
+                            <a href="#">Merchandise</a>
+                        </li>
+                        <li class="dropdown-li">
+                            <a href="#">Extras</a>
+                        </li>
+                        <li class="dropdown-li">
+                            <a href="#">Media</a>
+                        </li>
+                    </ul>
                 </div>
+              
+                
 
             </div>
 
@@ -69,7 +74,7 @@
         
     </header>
 
-    <div class="band-section section">
+    <div class="band-section section" id="band">
         <div class="band-section--bio">
             <h1 class="bio--band-name">The Band</h1>
 
@@ -110,7 +115,7 @@
 
     </div>
 
-    <div class="tour-section section">
+    <div class="tour-section section" id="tour">
         
             <div class="tour-dates--header-container">
                 <h1 class="header-container--header">Tour Dates</h1>
@@ -175,7 +180,7 @@
 
     </div>
 
-    <div class="contact-section section">
+    <div class="contact-section section" id="contact">
         
         <h3 class="contact--header">Contact</h3>
         <div class="contact--subheader">We love our fans!</div>
@@ -210,12 +215,13 @@
         <div class="blog">
 
             <div class="tab">
-                <button class="tablinks" onclick="openPost(event, 'Mike')">Mike</button>
+                <button class="tablinks active" onclick="openPost(event, 'Mike')">Mike</button>
                 <button class="tablinks" onclick="openPost(event, 'Chandler')">Chandler</button>
                 <button class="tablinks" onclick="openPost(event, 'Peter')">Peter</button>
             </div>
 
-            <div id="Mike" class="tabcontent active">
+            <div id="Mike" class="tabcontent" style="display: block">
+
                 <h3>Mike Ross, Manager</h3>
                 <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
             </div>
@@ -240,11 +246,13 @@
 
     </div>
 
-    <div class="bottom-image-section section"></div>
+    <div class="bottom-image-section section">
+        <image class="image-map" src="./img/map.jpg" alt="Map Image"></image>
+    </div>
 
     <footer>
         <div class="footer-container">
-            <a class="home-link"></a>
+            <a class="home-link" href="#"><div class="arrow-up"></div></a>
             <div class="footer-container--text">
                 Bootstrap Theme Made By www.w3schools.com
             </div>
@@ -257,6 +265,18 @@
 </body>
 
     <script>
+        function toggleNav(event) {
+            const dropdown = document.getElementsByClassName("dropdown-content")
+            
+            
+            if (dropdown[0].style.display === "block") {
+                dropdown[0].style.display = "none"
+            } else {
+                dropdown[0].style.display = "block"
+            }
+
+        }
+        
         function openPost(evt, blogName) {
 
 
@@ -276,6 +296,9 @@
         document.getElementById(blogName).style.display = "block";
         evt.currentTarget.className += " active";
         }
+
+
+
 
     </script>
 </html>
