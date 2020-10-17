@@ -7,6 +7,7 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Montserrat|Lato">
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+
 </head>
 <body>
     <wrapper>
@@ -27,10 +28,10 @@
                 </a>
               
                 <div class="nav-search">
-                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <span width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
                         <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
-                    </svg>
+                    </span>
 
                 </div>
 
@@ -132,14 +133,11 @@
         </div>
 
             
-
-       
-
         <div class="tour-tickets">
 
 
             <div class="ticket-card">
-                <div class="ticket-card--image"></div>
+                <image class="ticket-card--image" src="./img/paris.jpg">
                 <div class="ticket-card--details">
                     <h2 class="ticket-card--city">Paris</h2>
                     <div class="ticket-card--date">Friday 27 November 2015</div>
@@ -150,7 +148,7 @@
             </div>
 
             <div class="ticket-card">
-                <div class="ticket-card--image"></div>
+                <image class="ticket-card--image" src="./img/newyork.jpg">
                 <div class="ticket-card--details">
                     <h2 class="ticket-card--city">New York</h2>
                     <div class="ticket-card--date">Saturday 28 November 2015</div>
@@ -161,7 +159,7 @@
             </div>
 
             <div class="ticket-card">
-                <div class="ticket-card--image"></div>
+                <image class="ticket-card--image" src="./img/sanfran.jpg">
                 <div class="ticket-card--details">
                     <h2 class="ticket-card--city">San Francisco</h2>
                     <div class="ticket-card--date">Sunday 29 November 2015</div>
@@ -178,39 +176,63 @@
     </div>
 
     <div class="contact-section section">
-        <div class="contact-form-container">
-            
-            <div class="contact-section--info">
+        
+        <h3 class="contact--header">Contact</h3>
+        <div class="contact--subheader">We love our fans!</div>
+
+        <div class="contact-container">
+            <div class="contact-info">
                 <div class="info--text">Fan? Drop a note.</div>
-                <div class="info--location"><span>Map Sign</span>Chicago, US</div>
-                <div class="info--phone"><span>Phone Symbol</span>Phone: +00 1515151515</div>
-                <div class="info--email"><span>Email Sign</span>Email:mail@mail.com</div>
+                <div class="info--location">Location: Chicago, US</div>
+                <div class="info--phone">Phone: +00 1515151515</div>
+                <div class="info--email">Email:mail@mail.com</div>
             </div>
 
-            <div class="contact-form">
-                    <h1 class="contact-form--header">Contact</h1>
+            <form class="contact-form">
+                <input class="contact-form--name form-item" type="text" placeholder="Name" required>
+                <input class="contact-form--email form-item" type="email" placeholder="Email" required>
+                <textarea class="contact-form--comment form-item" type="text" placeholder="Comment">
+                </textarea>
 
-            </div>
+                <button class="contact-form--button button" type="submit">
+                    Send
+                </button>
 
-        </div>
-
-        <div class="blog-container">
-            <h1 class="blog-container--header">From The Blog</h1>
+            </form>
             
-            <div class="blog-preview">
-                <div class="blog-preview--names">
-                    <div class="blog-name">Mike</div>
-                    <div class="blog-name">Chandler</div>
-                    <div class="blog-name">Peter</div>
-                </div>
-
-                <div class="blog-preview--post">
-                    <div class="blog-post--name">Mike Ross, Manager</div>
-                    <div class="blog-post--content">Man, we've been on the road for some time now. Looking forward to lorem ipsum. </div>
-                </div>
-
-            </div>
         </div>
+
+    </div>
+
+    <div class="blog-container">
+        <h3 class="blog-container--header">From The Blog</h3>
+        
+        <div class="blog">
+
+            <div class="tab">
+                <button class="tablinks" onclick="openPost(event, 'Mike')">Mike</button>
+                <button class="tablinks" onclick="openPost(event, 'Chandler')">Chandler</button>
+                <button class="tablinks" onclick="openPost(event, 'Peter')">Peter</button>
+            </div>
+
+            <div id="Mike" class="tabcontent active">
+                <h3>Mike Ross, Manager</h3>
+                <p>Man, we've been on the road for some time now. Looking forward to lorem ipsum.</p>
+            </div>
+
+            <div id="Chandler" class="tabcontent">
+                <h3>Chandler Bing, Guitarist</h3>
+                <p>Always a pleasure people! Hope you enjoyed it as much as I did. Could I BE.. any more pleased?</p>
+            </div>
+              
+            <div id="Peter" class="tabcontent">
+                <h3>Peter Griffin, Bass player</h3>
+                <p>I mean, sometimes I enjoy the show, but other times I enjoy other things.</p>
+            </div>
+    
+
+        </div>
+    </div>
         
 
 
@@ -233,6 +255,29 @@
 
     </wrapper>
 </body>
+
+    <script>
+        function openPost(evt, blogName) {
+
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (let i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(blogName).style.display = "block";
+        evt.currentTarget.className += " active";
+        }
+
+    </script>
 </html>
 
 

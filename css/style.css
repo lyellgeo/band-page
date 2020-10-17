@@ -14,6 +14,26 @@ body {
     font-size: 1.5rem;
 }
 
+button {
+    border: none;
+    outline: none;
+}
+
+button:active {
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    border: none;
+    outline: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -21,6 +41,24 @@ a {
 
 ul {
     list-style-type: none
+}
+
+
+.button {
+    font-size: 1.4rem;    
+    color: white;
+    background-color: #2a2a2d;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid #2a2a2d;
+    justify-self: right;
+    margin-left: 70%;
+}
+
+.button:hover {
+    color: #2a2a2d;
+    background-color: white;
+    border: 1px solid #2a2a2d;
 }
 
 
@@ -186,7 +224,7 @@ margin-left: 1rem;
     margin-top: 4rem;
     justify-content: space-around;
     width: 100%;
-    border: 2px solid green;
+
 }
 
 .band-member {
@@ -217,7 +255,7 @@ margin-left: 1rem;
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 5px solid green;
+
 }
 
 .tour-dates {
@@ -252,6 +290,7 @@ margin-left: 1rem;
     color: #bdbdbd;
     width: 75%;
     margin-top: 3rem;
+
 }
 .date-month {
     padding: 2rem;
@@ -283,4 +322,212 @@ margin-left: 1rem;
     border-radius: 20px;
 }
 
+.tour-tickets {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-flow: row wrap;
+    width: 75%;
+    justify-content: space-between;
+}
 
+.ticket-card {
+    color: black;
+    flex-basis: 30%;
+    background-color: white;
+    text-align: center;
+    min-width: 150px;
+}
+
+.ticket-card--image {
+    width: 100%;
+}
+
+.ticket-card--details {
+    color: #555;
+}
+
+.ticket-card--city {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    font-style: italic;
+}
+
+.ticket-card--date {
+    font-style: italic;
+}
+
+.ticket-card--button {
+    font-size: 1.4rem;    
+    color: white;
+    background-color: #2a2a2d;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid #2a2a2d;
+}
+
+.ticket-card--button:hover {
+    color: #2a2a2d;
+    background-color: white;
+    border: 1px solid #2a2a2d;
+}
+
+.contact-section {
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: Lato, sans-serif;
+    color: #777;
+    border: 2px solid red;
+    width: 100%;
+    align-items: center;
+
+}
+
+.contact--header {
+    text-align: center;
+    font-weight: normal;
+    color: #111;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    margin-top: 8rem;
+}
+
+.contact--subheader {
+
+    text-align: center;
+    font-style: italic;
+    margin-top: 3rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 75%;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    flex-basis: 40%;
+    padding: 10px;
+    line-height: 4rem;
+}
+
+.contact-form {
+    color: #555;
+    font-family: inherit;
+    flex-basis: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+.form-item {
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 6px 12px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.form-item::placeholder {
+    color: #ccc;
+    opacity: 1;
+}
+
+.contact-form--name, .contact-form--email {
+    height: 34px;
+    flex-basis:  45%;
+    margin-bottom: 2rem;
+}
+
+.contact-form--comment {
+    font-family: inherit;
+    color: inherit;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    width: 100%;
+    height: 120px;
+    resize: none;
+    text-align: start;
+    writing-mode: horizontal-tb;
+    text-rendering: auto;
+}
+
+.contact-form--button {
+    margin-right: 0;
+    justify-self: right;
+    margin-top: 2rem;
+    margin-left: auto;
+}
+
+.blog-container {
+    text-align: center;
+    font-family: Lato, sans-serif;
+    width: 75%;
+    border: 1px solid red;
+    margin: auto;
+}
+
+.blog-container--header {
+    text-align: center;
+    font-weight: normal;
+    color: #111;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    margin-top: 2rem;
+}
+
+.tab {
+    overflow: hidden;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.tab button {
+    background-color: transparent;
+    border-radius: 4px 4px 0 0;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    border: 1px solid white;
+    border-bottom: 1px solid #ccc;
+
+  }
+
+.tab button:hover {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.tab button.active {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-bottom-color: transparent;
+    border-radius: 4px 4px 0 0;
+
+}
+
+.tabcontent {
+    border-top: 1px solid #ccc;
+    margin-top: -1px;
+    display: none;
+    text-align: left;
+    padding: 24px 12px;
+
+  }
+
+.tabcontent > h3 {
+
+    font-size: 3rem;
+    font-weight: 500;
+    color: #777;
+    padding: 2rem; 
+
+}
+  
+  
